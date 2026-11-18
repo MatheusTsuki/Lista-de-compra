@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div>
+                <span class="tag">ORGANIZE SUA ROTINA</span>
+                <h1>Minha Lista <span>de Compras.</span></h1>
+                <p>Organize suas compras de forma simples.</p>
+            </div>
+            <div class="cart-icon">🛒</div>
+        </header>
+
+        <section class="summary">
+            <div>
+                <p>Valor total</p>
+                <h2 id="total">R$ 0,00</h2>
+            </div>
+            <div class="summary-info">
+                <span id="count">0 produtos</span>
+                <span id="completed">0 comprados</span>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h3>Adicionar produto</h3>
+
+            <form id="productForm">
+                <div class="inputs">
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="Nome do produto"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="productPrice"
+                        placeholder="Preço (R$)"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <button type="submit">+ Adicionar produto</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <div class="list-header">
+                <h3>Sua lista</h3>
+                <button id="clearButton" class="clear-button">
+                    Limpar lista
+                </button>
+            </div>
+
+            <div id="productList"></div>
+
+            <p id="emptyMessage" class="empty-message">
+                Sua lista está vazia. Adicione seu primeiro produto!
+            </p>
+        </section>
+
+        <footer>
+            Desenvolvido com HTML, CSS e JavaScript 💚
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
