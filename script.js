@@ -18,7 +18,7 @@ function saveProducts() {
     localStorage.setItem("products", JSON.stringify(products));
 }
 
-// Formatar valores em reais
+// Formatar valores
 function formatMoney(value) {
     return value.toLocaleString("pt-BR", {
         style: "currency",
